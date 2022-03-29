@@ -1,0 +1,118 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 10px 0px;
+}
+
+body {
+  background: rgb(43, 45, 66);
+  background: linear-gradient(
+    86deg,
+    rgba(48, 50, 73, 1) 0%,
+    rgba(34, 35, 52, 1) 100%
+  );
+}
+
+footer {
+  background-color: #181925;
+}
+
+footer .nav ul li {
+  margin: 15px auto;
+}
+
+.bg-dark {
+  background-color: #181925;
+}
+
+#videos ul .video-item:last-child {
+  margin-bottom: 100px;
+}
+
+.text-white {
+  color: #f0f0f0;
+}
+
+p {
+  margin: 13px 0px;
+}
+
+.ms-auto {
+  margin-left: auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+}
+
+.my-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-3 {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.my-4 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+header .navbar .nav ul {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+}
+
+header .navbar {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+footer .navbar .nav ul {
+  display: flex;
+  padding-left: 0px;
+  list-style: none;
+}
+
+footer .navbar {
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+}
+
+.nav ul li {
+  margin: 15px 25px;
+}
+
+.App {
+  text-align: center;
+}
+
+.counter_btn {
+  margin: 0px 10px;
+}
+
+.modal-root {
+  position: fixed;
+  top: 0;
+  z-index: 111;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(1, 1, 1, 0.5);
+}
