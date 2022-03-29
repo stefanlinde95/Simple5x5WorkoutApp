@@ -21,7 +21,7 @@ export default class Navbar extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/users/")
+      .get("https://sunny-buttercream-524805.netlify.app/users/")
       .then((response) => {
         this.setState({ user: response.data, init: true });
       })

@@ -68,7 +68,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/exercises/")
+      .get("https://sunny-buttercream-524805.netlify.app/exercises/")
       .then((response) => {
         this.setState({ exercises: response.data });
       })
@@ -78,9 +78,11 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios.delete("http://localhost:3001/exercises/" + id).then((response) => {
-      console.log(response.data);
-    });
+    axios
+      .delete("https://sunny-buttercream-524805.netlify.app/exercises/" + id)
+      .then((response) => {
+        console.log(response.data);
+      });
 
     this.setState({
       exercises: this.state.exercises.filter((el) => el._id !== id),
