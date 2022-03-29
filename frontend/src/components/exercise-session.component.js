@@ -25,7 +25,7 @@ export const ExerciseSession = ({ reps, sets, weight, name, warmup }) => {
       </div>
       {warmup ? (
         <p className="text-white">
-          {doneSets == sets ? `Warmup done! ${name} now` : ""}
+          {doneSets == sets ? `Warmup done. ${name} now!` : ""}
         </p>
       ) : (
         <p className="text-white">

@@ -143,6 +143,12 @@ export const WorkoutStyle = styled.div`
     margin-left: -15px;
   }
 
+  @media (max-width: 768px) {
+    form .kg {
+      margin-left: 0px;
+    }
+  }
+
   form .exercise-wrapper {
     margin: 25px 0px;
     padding: 15px 40px;
