@@ -137,7 +137,7 @@ export default class Workout extends Component {
 
   componentDidMount() {
     axios
-      .get("https://sunny-buttercream-524805.netlify.app/exercises/")
+      .get("https://simple5x5.netlify.app//exercises/")
       .then((response) => {
         this.setState({ exercises: response.data, init: true });
       })
@@ -193,10 +193,7 @@ export default class Workout extends Component {
       )
     ) {
       axios
-        .post(
-          "https://sunny-buttercream-524805.netlify.app/exercises/add",
-          exerciseResults,
-        )
+        .post("https://simple5x5.netlify.app//exercises/add", exerciseResults)
         .then((res) => console.log(res.data));
 
       window.localStorage.clear();
@@ -208,10 +205,7 @@ export default class Workout extends Component {
       )
     ) {
       axios
-        .post(
-          "https://sunny-buttercream-524805.netlify.app/exercises/add",
-          exerciseResults,
-        )
+        .post("https://simple5x5.netlify.app//exercises/add", exerciseResults)
         .then((res) => console.log(res.data));
 
       window.localStorage.clear();
@@ -251,10 +245,7 @@ export default class Workout extends Component {
           date: new Date(),
         };
         axios
-          .post(
-            "https://sunny-buttercream-524805.netlify.app/exercises/add",
-            failedResults,
-          )
+          .post("https://simple5x5.netlify.app//exercises/add", failedResults)
           .then((res) => console.log(res.data));
 
         window.localStorage.clear();

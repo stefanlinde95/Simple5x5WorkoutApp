@@ -68,7 +68,7 @@ export default class ExercisesList extends Component {
 
   componentDidMount() {
     axios
-      .get("https://sunny-buttercream-524805.netlify.app/exercises/")
+      .get("https://simple5x5.netlify.app//exercises/")
       .then((response) => {
         this.setState({ exercises: response.data });
       })
@@ -79,7 +79,7 @@ export default class ExercisesList extends Component {
 
   deleteExercise(id) {
     axios
-      .delete("https://sunny-buttercream-524805.netlify.app/exercises/" + id)
+      .delete("https://simple5x5.netlify.app//exercises/" + id)
       .then((response) => {
         console.log(response.data);
       });
