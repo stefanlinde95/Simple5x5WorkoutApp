@@ -11,6 +11,14 @@ const port = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
+// Added 29.03
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+  app.get("*", function (req, res) {
+    res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+  });
+}
+
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri);
 const connection = mongoose.connection;
