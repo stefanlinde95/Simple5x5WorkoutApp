@@ -137,7 +137,7 @@ export default class Workout extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/exercises/")
+      .get("/exercises/")
       .then((response) => {
         this.setState({ exercises: response.data, init: true });
       })
@@ -193,7 +193,7 @@ export default class Workout extends Component {
       )
     ) {
       axios
-        .post("http://localhost:3001/exercises/add", exerciseResults)
+        .post("/exercises/add", exerciseResults)
         .then((res) => console.log(res.data));
 
       window.localStorage.clear();
@@ -205,7 +205,7 @@ export default class Workout extends Component {
       )
     ) {
       axios
-        .post("http://localhost:3001/exercises/add", exerciseResults)
+        .post("/exercises/add", exerciseResults)
         .then((res) => console.log(res.data));
 
       window.localStorage.clear();
@@ -245,7 +245,7 @@ export default class Workout extends Component {
           date: new Date(),
         };
         axios
-          .post("http://localhost:3001/exercises/add", failedResults)
+          .post("/exercises/add", failedResults)
           .then((res) => console.log(res.data));
 
         window.localStorage.clear();

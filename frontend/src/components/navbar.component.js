@@ -21,7 +21,7 @@ export default class Navbar extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3001/users/")
+      .get("/users/")
       .then((response) => {
         this.setState({ user: response.data, init: true });
       })
