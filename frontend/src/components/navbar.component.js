@@ -40,9 +40,6 @@ export default class Navbar extends Component {
                 <li>
                   <Link to="/">Workout</Link>
                 </li>
-                {/* <li>
-                  <Link to="/warmup">Warmup</Link>
-                </li> */}
                 <li>
                   <Link to="/history">History</Link>
                 </li>

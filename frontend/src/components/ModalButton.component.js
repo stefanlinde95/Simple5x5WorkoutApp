@@ -6,13 +6,21 @@ export default function ModalButton({ weight }) {
   const [liftWeight, setLiftWeight] = useState(weight);
   return (
     <>
-      <a
-        href="#"
-        className="text-grey mt-4 pl-2 font-thin"
+      <input
+        className="weight ms-auto bg-transparent mr-1"
+        type="number"
+        onChange={(e) => {
+          setLiftWeight(e.target.value);
+        }}
+        value={liftWeight}
+      />
+      <p className="kg text-xl">Kg</p>
+      <div
+        className="text-grey mt-4 pl-2 font-thin edit-btn"
         onClick={() => setOpenModal(!openModal)}
       >
         Edit
-      </a>
+      </div>
       <Modal
         liftWeight={liftWeight}
         openModal={openModal}

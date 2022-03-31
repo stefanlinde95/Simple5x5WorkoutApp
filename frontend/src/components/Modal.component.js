@@ -8,6 +8,7 @@ export default function Modal({
   setLiftWeight,
   setOpenModal,
 }) {
+  const [weightStep, setWeightStep] = useState(2.5);
   return ReactDom.createPortal(
     <ModalStyle>
       <div className={`${openModal ? "modal-root" : "hidden"}`}>
@@ -31,31 +32,41 @@ export default function Modal({
               onChange={(e) => setLiftWeight(e.target.value)}
             />
           </div>
-          <p className="text-center">Kg</p>
-          <div className="w-full mt-2 flex">
-            <a
-              href="#"
-              className="p-2 add"
-              onClick={() => setLiftWeight(liftWeight + 2.5)}
+          <p className="text-center text-2xl">Kg</p>
+          <div className="w-full my-2 text-center">
+            <p>Set step weight:</p>
+            <input
+              type="number"
+              onChange={(e) => setWeightStep(e.target.value)}
+              value={weightStep}
+              className="border-b-2 w-10 text-center text-xl"
+            />
+          </div>
+          <div className="w-full my-2 flex">
+            <div
+              className="add cursor-pointer border rounded-full"
+              onClick={() =>
+                setLiftWeight(parseFloat(liftWeight) + parseFloat(weightStep))
+              }
             >
               +
-            </a>
-            <a
-              href="#"
-              className="p-2 minus"
-              onClick={() => setLiftWeight(liftWeight - 2.5)}
+            </div>
+            <div
+              className="minus cursor-pointer border rounded-full"
+              onClick={() =>
+                setLiftWeight(parseFloat(liftWeight) - parseFloat(weightStep))
+              }
             >
               -
-            </a>
+            </div>
           </div>
-          <div className="d-full text-center my-1">
-            <a
-              href="#"
-              className="border px-2 rounded border-slate-600 bg-black text-white confirm-btn"
+          <div className="d-full text-center mt-4 mb-2">
+            <div
+              className="border px-2 rounded border-slate-600 bg-black text-white confirm-btn cursor-pointer mx-4"
               onClick={() => setOpenModal(false)}
             >
               Done
-            </a>
+            </div>
           </div>
         </div>
       </div>

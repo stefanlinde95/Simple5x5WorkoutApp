@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import questions from "./data/faq.data";
-import { FaqStyle } from "./styles/Faq.styles";
+import questions from "../components/data/faq.data";
+import { FaqStyle } from "../components/styles/Faq.styles";
 
 const SingleQuestion = ({ title, info }) => {
   const [showInfo, setShowInfo] = useState(false);

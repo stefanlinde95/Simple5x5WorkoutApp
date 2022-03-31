@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { videoData } from "./data/videos.data";
+import { videoData } from "../components/data/videos.data";
 
 const Videos = () => {
   return (
     <div id="videos" className="my-4">
       <div className="sm:w-100 md:w-4/5 lg:w-3/5 block mx-auto text-center text-white">
         <h1 className="text-4xl">Videos</h1>
-        <ul className="list-none sm:w-95 md:w-85 lg:w-3/4 mx-auto my-3">
+        <ul className="list-none sm:w-95 md:w-90 lg:w-3/4 mx-auto my-3">
           {videoData.map((item) => {
             const { id, banner, title, description } = item;
             return (

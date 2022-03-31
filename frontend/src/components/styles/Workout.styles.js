@@ -137,16 +137,32 @@ export const WorkoutStyle = styled.div`
   form .weight {
     font-size: 1.25rem;
     text-align: right;
+    -moz-appearance: none;
+  }
+
+  .edit-btn {
+    cursor: pointer;
   }
 
   form .kg {
-    margin-left: -15px;
+    // margin-left: -15px;
+    background: #181925;
   }
 
   @media (max-width: 768px) {
     form .kg {
       margin-left: 0px;
     }
+  }
+
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
   }
 
   form .exercise-wrapper {

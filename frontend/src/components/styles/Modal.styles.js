@@ -6,27 +6,43 @@ export const ModalStyle = styled.div`
   .wrapper {
     max-width: 350px;
     margin: auto;
-    margin-top: 150px;
+    margin-top: 100px;
     padding: 15px;
     text-align: right;
   }
 
   .add {
     margin: auto;
-    font-size: 2.5rem;
-    text-shadow: 5px 5px 20px #000;
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    transition: 0.5s;
   }
 
   .minus {
     margin: auto;
-    font-size: 2.5rem;
-    text-shadow: 5px 5px 15px #000;
+    font-size: 1.5rem;
+    padding: 10px 23px;
+    transition: 0.5s;
   }
 
   .weight {
     width: 150px;
     height: 150px;
     margin: auto;
+  }
+
+  .add:hover {
+    transition: 1s;
+    box-shadow: 5px 5px 25px grey;
+    color: #fff;
+    background: #000;
+  }
+
+  .minus:hover {
+    transition: 1s;
+    box-shadow: 5px 5px 25px grey;
+    color: #fff;
+    background: #000;
   }
 
   .confirm-btn {

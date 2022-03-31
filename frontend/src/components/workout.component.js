@@ -87,13 +87,6 @@ const ExerciseConstructor = (props) => {
                         value={item.name}
                         readOnly
                       />
-                      <input
-                        className="weight ms-auto bg-transparent mr-1"
-                        type="number"
-                        value={item.weight ? item.weight + 2.5 : 20}
-                        readOnly
-                      />
-                      <p className="kg text-xl"> Kg</p>
                       <ModalButton weight={item.weight} />
                     </div>
                     <input
