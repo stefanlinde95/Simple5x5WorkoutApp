@@ -6,4 +6,5 @@ export const GuidesStyle = styled.div`
   margin: auto;
   padding: 25px;
   color: #08080c;
+  margin-bottom: 50px;
 `;
