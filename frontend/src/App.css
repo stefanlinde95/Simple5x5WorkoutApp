@@ -101,6 +101,13 @@ footer img {
   height: auto;
 }
 
+.singl-rep-btn {
+  color: grey;
+  opacity: .5;
+  border: 1px solid grey;
+  border-radius: 50px;
+}
+
 .nav ul li {
   margin: 15px 25px;
 }

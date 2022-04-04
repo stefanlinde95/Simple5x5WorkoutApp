@@ -13,7 +13,7 @@ export const ExerciseSession = ({ reps, sets, weight, name, warmup }) => {
       <div className="d-flex sets">
         {[...Array(sets)].map((e, i) => (
           <Suspense
-            fallback={<div className="border border-2 rounded-full">0</div>}
+            fallback={<div className="singl-rep-btn rounded-full">0</div>}
           >
             <RepCounter
               key={++i}
