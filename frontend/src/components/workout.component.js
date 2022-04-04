@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState, Component } from "react";
 import { WorkoutStyle } from "../components/styles/Workout.styles";
 import ExerciseSession from "./exercise-session.component";
-import ModalButton from "./ModalButton.component";
+import ModalWeightButton from "./ModalWeightButton.component";
 import Warmup from "./warmup.component";
 
 const ExerciseConstructor = (props) => {
@@ -87,7 +87,7 @@ const ExerciseConstructor = (props) => {
                         value={item.name}
                         readOnly
                       />
-                      <ModalButton weight={item.weight} />
+                      <ModalWeightButton weight={item.weight} />
                     </div>
                     <input
                       className="sets"
@@ -130,7 +130,7 @@ export default class Workout extends Component {
 
   componentDidMount() {
     axios
-      .get("/exercises/")
+      .get("3001/exercises/")
       .then((response) => {
         this.setState({ exercises: response.data, init: true });
       })

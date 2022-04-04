@@ -34,12 +34,12 @@ export default function Modal({
           </div>
           <p className="text-center text-2xl">Kg</p>
           <div className="w-full my-2 text-center">
-            <p>Set step weight:</p>
+            <p>Weight step</p>
             <input
               type="number"
               onChange={(e) => setWeightStep(e.target.value)}
               value={weightStep}
-              className="border-b-2 w-10 text-center text-xl"
+              className="border-b-2 w-10 text-center text-xl rounded-none"
             />
           </div>
           <div className="w-full my-2 flex">

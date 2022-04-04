@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import RepCounter from "./repcounter.component";
+import React, { useState, lazy, Suspense } from "react";
+const RepCounter = lazy(() => import("./repcounter.component"));
 
 export const ExerciseSession = ({ reps, sets, weight, name, warmup }) => {
   const [doneSets, setDoneSets] = useState(0);
@@ -7,20 +7,27 @@ export const ExerciseSession = ({ reps, sets, weight, name, warmup }) => {
 
   const ShortWarmupWeights = [20, 20, 22.5, 25, 27.5];
   const LongWarmupWeights = [20, 20, 30, 40, 50];
+
   return (
     <div className="block">
       <div className="d-flex sets">
         {[...Array(sets)].map((e, i) => (
-          <RepCounter
-            key={++i}
-            id={i}
-            name={name}
-            reps={reps}
-            doneSets={doneSets}
-            warmup={warmup}
-            weight={weight > 50 ? LongWarmupWeights[i] : ShortWarmupWeights[i]}
-            setDoneSets={setDoneSets}
-          />
+          <Suspense
+            fallback={<div className="border border-2 rounded-full">0</div>}
+          >
+            <RepCounter
+              key={++i}
+              id={i}
+              name={name}
+              reps={reps}
+              doneSets={doneSets}
+              warmup={warmup}
+              weight={
+                weight > 50 ? LongWarmupWeights[i] : ShortWarmupWeights[i]
+              }
+              setDoneSets={setDoneSets}
+            />
+          </Suspense>
         ))}
       </div>
       {warmup ? (

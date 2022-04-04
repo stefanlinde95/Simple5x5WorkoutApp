@@ -18,6 +18,7 @@ const Videos = () => {
                     alt={title}
                     width={150}
                     className="rounded-l-xl rounded-b-l-xl object-cover"
+                    loading="lazy"
                   />
                   <div className="block text-left ml-4 mb-4">
                     <h2 className="text-2xl">{title}</h2>

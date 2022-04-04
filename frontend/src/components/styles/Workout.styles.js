@@ -142,6 +142,13 @@ export const WorkoutStyle = styled.div`
 
   .edit-btn {
     cursor: pointer;
+    transition: 0.5s;
+  }
+
+  .edit-btn:hover {
+    transition: 0.5s;
+    color: #21a5fd;
+    opacity: 1;
   }
 
   form .kg {

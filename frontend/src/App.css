@@ -96,6 +96,11 @@ footer .navbar {
   margin: auto;
 }
 
+footer img {
+  width: 25px;
+  height: auto;
+}
+
 .nav ul li {
   margin: 15px 25px;
 }

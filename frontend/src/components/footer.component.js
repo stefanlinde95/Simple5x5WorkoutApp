@@ -18,7 +18,7 @@ const Footer = () => {
             </li>
             <li>
               <Link to="/videos" className="flex">
-                <img src={videos} alt="Videos" width={25} className="mr-2" />
+                <img src={videos} alt="videos" width={25} className="mr-2" />
                 Videos
               </Link>
             </li>

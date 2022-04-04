@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "./Modal.component";
 
-export default function ModalButton({ weight }) {
+export default function ModalWeightButton({ weight }) {
   const [openModal, setOpenModal] = useState(false);
   const [liftWeight, setLiftWeight] = useState(weight);
   return (

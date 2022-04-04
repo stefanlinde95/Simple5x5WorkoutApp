@@ -3,12 +3,24 @@ import styled from "styled-components";
 export const ModalStyle = styled.div`
   width: 100%;
 
-  .wrapper {
-    max-width: 350px;
-    margin: auto;
-    margin-top: 100px;
-    padding: 15px;
-    text-align: right;
+  @media (min-width: 760px) {
+    .wrapper {
+      max-width: 350px;
+      margin: auto;
+      margin-top: 100px;
+      padding: 15px;
+      text-align: right;
+    }
+  }
+
+  @media (max-width: 760px) {
+    .wrapper {
+      max-width: 350px;
+      margin: auto;
+      margin-top: 50px;
+      padding: 15px;
+      text-align: right;
+    }
   }
 
   .add {
